@@ -28,14 +28,14 @@ function playRound (playerSelection, computerSelection) {
     if(playerSelection=="paper"){
         if(computerSelection=="rock"){
             playerScore++;
-            return ("You win! Paper wins over rock.");
+            result.textContent = "You win! Paper wins over rock.";
         }
         if(computerSelection=="paper"){
-            return ("Draw! Try again.");
+            result.textContent =  "Draw! Try again.";
         }
         if(computerSelection=="scissors"){
             computerScore++;
-            return ("You lose! Scissors win over paper.");
+            result.textContent =  "You lose! Scissors win over paper.";
         }
     }
     
@@ -43,14 +43,14 @@ function playRound (playerSelection, computerSelection) {
     if(playerSelection=="scissors"){
         if(computerSelection=="rock"){
             computerScore++;
-            return ("You lose! Rock wins over scissors.");
+            result.textContent = "You lose! Rock wins over scissors.";
         }
         if(computerSelection=="paper"){
             playerScore++;
-            return ("You win! Scissors win over paper.");
+            result.textContent = "You win! Scissors win over paper.";
         }
         if(computerSelection=="scissors"){
-            return ("Draw! Try again.");
+            result.textContent =  "Draw! Try again.";
         }
     }
 }
