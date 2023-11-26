@@ -66,6 +66,12 @@ function checkScore () {
         else {
             finalResult.textContent = "You win!!";
         }
+        //reset the score
+        playerScore = 0;
+        computerScore = 0;
+    }
+    else{
+        finalResult.textContent = "";
     }
 }
 
@@ -136,3 +142,5 @@ function playRound (playerSelection, computerSelection) {
         }
     }
 }
+
+displayScore();
