@@ -11,6 +11,7 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const player = document.querySelector("#player");
 const opponent = document.querySelector("#opponent");
+const scores = document.querySelector("#scores");
 
 // Create new DOM elements
 const result = document.createElement("div");
@@ -19,11 +20,14 @@ const playerScoreboard = document.createElement("h1");
 playerScoreboard.classList.add("playerScoreboard");
 const opponentScoreboard = document.createElement("h1");
 opponentScoreboard.classList.add("opponentScoreboard");
+const finalResult = document.createElement("h1");
+finalResult.classList.add("finalResult");
 
 // Append DOM elements
 container.appendChild(result);
 player.appendChild(playerScoreboard);
 opponent.appendChild(opponentScoreboard);
+scores.appendChild(finalResult);
 
 // eventListeners
 rock.addEventListener("click", () => {
@@ -54,6 +58,17 @@ function displayScore () {
     opponentScoreboard.textContent = computerScore;
 }
 
+function checkScore () {
+    if(playerScore==5 || computerScore==5) {
+        if(computerScore>playerScore){
+            finalResult.textContent = "You lose!";
+        }
+        else {
+            finalResult.textContent = "You win!!";
+        }
+    }
+}
+
 function playRound (playerSelection, computerSelection) {
     // Make the user's selection case insensitive:
     playerSelection = playerSelection.toLowerCase();
@@ -63,16 +78,19 @@ function playRound (playerSelection, computerSelection) {
         if(computerSelection=="rock"){
             result.textContent = "Draw! Try again.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="paper"){
             computerScore++;
             result.textContent = "You lose! Paper wins over rock.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="scissors"){
             playerScore++;
             result.textContent = "You win! Rock wins over scissors.";
             displayScore();
+            checkScore();
         }
     }
 
@@ -82,15 +100,18 @@ function playRound (playerSelection, computerSelection) {
             playerScore++;
             result.textContent = "You win! Paper wins over rock.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="paper"){
             result.textContent =  "Draw! Try again.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="scissors"){
             computerScore++;
             result.textContent =  "You lose! Scissors win over paper.";
             displayScore();
+            checkScore();
         }
     }
     
@@ -100,15 +121,18 @@ function playRound (playerSelection, computerSelection) {
             computerScore++;
             result.textContent = "You lose! Rock wins over scissors.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="paper"){
             playerScore++;
             result.textContent = "You win! Scissors win over paper.";
             displayScore();
+            checkScore();
         }
         if(computerSelection=="scissors"){
             result.textContent =  "Draw! Try again.";
             displayScore();
+            checkScore();
         }
     }
 }
@@ -131,6 +155,9 @@ function game () {
 
 }
 
-console.log(game());
+
+
+
+
 console.log(computerScore);
 console.log(playerScore);
