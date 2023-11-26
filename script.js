@@ -136,28 +136,3 @@ function playRound (playerSelection, computerSelection) {
         }
     }
 }
-
-function game () {
-    // Play 5 rounds
-    // for (let i = 0; i<5;i++){
-    //     playerSelection = window.prompt("Choose rock, paper, or scissors.");
-    //     computerSelection = getComputerChoice();
-    //     playRound(playerSelection, computerSelection);
-    // }
-
-    // Check to see who is the winner
-    // if(computerScore>playerScore){
-    //     alert("You Lose!");
-    // }
-    // else {
-    //     alert("You win!!!");
-    // }
-
-}
-
-
-
-
-
-console.log(computerScore);
-console.log(playerScore);
