@@ -1,7 +1,7 @@
 # RockPaperScissors
 
 ## Introduction
-Simple rock paper scissors game created using HTML, CSS, and JavaScript. This game can be found live at https://williamandrews2.github.io/RockPaperScissors/
+Simple rock paper scissors game created using HTML, CSS, and JavaScript. This game can be found live [here](https://williamandrews2.github.io/RockPaperScissors/).
 
 ## How to Play
 Upon loading onto the site (or live server if you have the repo on your local machine), there are rock, paper, and scissor icons. You can click one of these to "choose
@@ -12,4 +12,4 @@ Each rock, paper, and scissor icon is set to use your input against the computer
 a simple random number function. Messages are displayed after each round and at the end of the 5 rounds. These are all done by manipulating the DOM.
 
 ## Known issues
-As of right now, the only issue I am aware of is that the page is not mobile-friendly yet. 
+Not mobile-friendly
