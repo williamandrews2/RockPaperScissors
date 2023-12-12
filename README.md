@@ -12,4 +12,5 @@ Each rock, paper, and scissor icon is set to use your input against the computer
 a simple random number function. Messages are displayed after each round and at the end of the 5 rounds. These are all done by manipulating the DOM.
 
 ## Known issues
-Not mobile-friendly
+* Not mobile-friendly
+* Footer is inconsistent, does not stay at the bottom 100% of the time.
